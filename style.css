@@ -67,6 +67,10 @@ body, input, button{
   padding: 1.6rem;
 }
 
+form{
+  width: 30rem;
+}
+
 form h1 {
   margin-bottom: 3.2rem;
 
@@ -100,7 +104,7 @@ form input::placeholder{
   margin-top: 1.6rem;
 }
 
-button{
+form button{
   margin-top: 3.2rem;
   padding: 1.6rem;
   width: 100%;
@@ -123,7 +127,45 @@ button{
 
 }
 
-button:hover{
+form button:hover{
   background-color: var(--bg-button-hover);
 
+}
+
+/*modal*/
+.modal-wrapper.open{
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-wrapper{
+  position: absolute;
+  background: rgba(0,0,0,0.7);
+  
+  inset: 0;
+  
+  display: grid;
+  place-content: center;
+
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modal{
+  position: relative;
+}
+.modal button{
+  background: none;
+  border: none;
+  
+  position: absolute;;
+  top: 1.6rem;
+  right: 1.6rem;
+
+  cursor: pointer;
+  transition: transform 3s;
+}
+
+.modal button:hover{
+  transform: scale(1.1);
 }
